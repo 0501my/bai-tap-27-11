@@ -6,7 +6,7 @@ let input = require("readline-sync")
 let menuManager = new DishManager()
 let cafe = new MenuManager(1, "capuchino", 25000, 'coffee', "thức uống", 2)
 let tea = new MenuManager(2, "tra dao", 20000, "tea", "giảm stress", 3)
-let juice = new MenuManager(3, "nuosc ep dua hau", 30000, "juice", "hoa quả", 4)
+let juice = new MenuManager(3, "nuoc ep dua hau", 30000, "juice", "hoa quả", 4)
 let snacks = new MenuManager(4, "bim bim", 40000, "snacks", "đồ ăn trẻ con", 5)
 let cook = new MenuManager(5, "dua bo", 50000, "cook", "cơm rang", 6)
 
@@ -74,7 +74,7 @@ function addDish() {
     let id = +input.question(`Enter id : `)
     let dishName = input.question(`Enter dish Name : `)
     let price = input.question(`Enter price : `)
-    let typeIndex = +input.question(`Choice type : \n 1. coffee \n 2.tea \n 3.juice \n 4.snack \n 5.cook\n`)
+    let typeIndex = +input.question(`Choice type : \n 1.coffee \n 2.tea \n 3.juice \n 4.snack \n 5.cook\n`)
     let type = types[typeIndex -1]
     let describe = input.question(`Enter describe : `)
     let amount = input.question(`Enter amount : `)
@@ -111,6 +111,5 @@ function clearType() {
     let typeIndex = +input.question(`Choice type : \n 1. coffee \n 2.tea \n 3.juice \n 4.snack \n 5.cook\n`)
     let type2 = types[typeIndex - 1];
     menuManager.removeByType(type2)
-
 }
 
